@@ -17,6 +17,11 @@ int main()
 {
 //    INTRO
     intro();
+
+    char CINs[10][10] = {"AA12345","BB12345","CC12345","DD12345","EE12345","FF12345","GG12345","HH12345","II12345","JJ12345"};
+    char noms[10][50] = {"Nemli","Harira","Monsif","Tazzi","Rachidi","Youssfi","EL-hamdouni","Hakimi","Jomari","Bcharri"};
+    char prenoms[10][50] =  {"Younes","Kamal","Hassan","Badr","Karim","Hassna","Rania","Oumaima","Salma","Marwan"};
+    double montans[10] = {100000,3000,2500,50000,3214,6785,5000,45000,2500,100};
     // variables auxiliaires
     int m,i,j,check,check2,c;
     char rech[10];
@@ -40,10 +45,42 @@ menu :
         printf("\t\tchoisis une operation :\t");
         scanf("%d",&chois);
     }
-    while(chois<1 || chois >7);
+    while(chois<0 || chois >7);
 
     switch(chois)
     {
+    case 0:
+
+        printf("");
+        j=0;
+        int indexCpy=index;
+        for(i = indexCpy;i< indexCpy+10 ;i++){
+            strcpy(cin[i],CINs[j]);
+            strcpy(nom[i],noms[j]);
+            strcpy(prenom[i],prenoms[j]);
+            montant[i] = montans[j];
+            j++;
+            index++;
+        }
+
+        printf("Bien Ajouté");
+
+
+        printf("go back to the menu press 1 and enter\n");
+        do
+        {
+            printf("\t\t\t\t");
+            scanf("%d",&m);
+        }
+        while(m != 1);
+
+        if(m == 1)
+        {
+            goto menu;
+        }
+
+
+        break;
     case 1:
 ajout :
         system("cls");
@@ -793,70 +830,90 @@ void welcome()
 void animationMenu()
 {
     printf("\n\n\n\n\n\n\n\n");
-    printf("\t\t\t\t\t\t\t\t*************************************************\n");
-    printf("\t\t\t\t\t\t\t\t*                                               *\n");
-    printf("\t\t\t\t\t\t\t\t*   1- Ajouter un compte bancaire               *\n");
-    printf("\t\t\t\t\t\t\t\t*   2- Ajouter plusieurs comptes bancaires      *\n");
-    printf("\t\t\t\t\t\t\t\t*   3- Operations                               *\n");
-    printf("\t\t\t\t\t\t\t\t*   4- Affichage                                *\n");
-    printf("\t\t\t\t\t\t\t\t*   5- Fidelisation                             *\n");
-    printf("\t\t\t\t\t\t\t\t*   6- Quitter l'application                    *\n");
-    printf("\t\t\t\t\t\t\t\t*                                               *\n");
-    printf("\t\t\t\t\t\t\t\t*************************************************\n\n");
-    Sleep(100);
+    printf("\t\t\t\t\t\t\t\t***************************************************\n");
+    printf("\t\t\t\t\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t\t\t\t\t* 0- remplissage du tableau automatiquemant(test) *\n");
+    printf("\t\t\t\t\t\t\t\t* 1- Ajouter un compte bancaire                   *\n");
+    printf("\t\t\t\t\t\t\t\t* 2- Ajouter plusieurs comptes bancaires          *\n");
+    printf("\t\t\t\t\t\t\t\t* 3- Operations                                   *\n");
+    printf("\t\t\t\t\t\t\t\t* 4- Affichage                                    *\n");
+    printf("\t\t\t\t\t\t\t\t* 5- Fidelisation                                 *\n");
+    printf("\t\t\t\t\t\t\t\t* 6- Quitter l'application                        *\n");
+    printf("\t\t\t\t\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t\t\t\t\t***************************************************\n\n");
+    Sleep(50);
     system("cls");
     printf("\n\n\n\n\n\n\n\n");
-    printf("\t\t\t\t\t\t\t*************************************************\n");
-    printf("\t\t\t\t\t\t\t*                                               *\n");
-    printf("\t\t\t\t\t\t\t*   1- Ajouter un compte bancaire               *\n");
-    printf("\t\t\t\t\t\t\t*   2- Ajouter plusieurs comptes bancaires      *\n");
-    printf("\t\t\t\t\t\t\t*   3- Operations                               *\n");
-    printf("\t\t\t\t\t\t\t*   4- Affichage                                *\n");
-    printf("\t\t\t\t\t\t\t*   5- Fidelisation                             *\n");
-    printf("\t\t\t\t\t\t\t*   6- Quitter l'application                    *\n");
-    printf("\t\t\t\t\t\t\t*                                               *\n");
-    printf("\t\t\t\t\t\t\t*************************************************\n\n");
-    Sleep(100);
+    printf("\t\t\t\t\t\t\t***************************************************\n");
+    printf("\t\t\t\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t\t\t\t* 0- remplissage du tableau automatiquemant(test) *\n");
+    printf("\t\t\t\t\t\t\t* 1- Ajouter un compte bancaire                   *\n");
+    printf("\t\t\t\t\t\t\t* 2- Ajouter plusieurs comptes bancaires          *\n");
+    printf("\t\t\t\t\t\t\t* 3- Operations                                   *\n");
+    printf("\t\t\t\t\t\t\t* 4- Affichage                                    *\n");
+    printf("\t\t\t\t\t\t\t* 5- Fidelisation                                 *\n");
+    printf("\t\t\t\t\t\t\t* 6- Quitter l'application                        *\n");
+    printf("\t\t\t\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t\t\t\t***************************************************\n\n");
+    Sleep(50);
     system("cls");
     printf("\n\n\n\n\n\n\n\n");
-    printf("\t\t\t\t\t\t*************************************************\n");
-    printf("\t\t\t\t\t\t*                                               *\n");
-    printf("\t\t\t\t\t\t*   1- Ajouter un compte bancaire               *\n");
-    printf("\t\t\t\t\t\t*   2- Ajouter plusieurs comptes bancaires      *\n");
-    printf("\t\t\t\t\t\t*   3- Operations                               *\n");
-    printf("\t\t\t\t\t\t*   4- Affichage                                *\n");
-    printf("\t\t\t\t\t\t*   5- Fidelisation                             *\n");
-    printf("\t\t\t\t\t\t*   6- Quitter l'application                    *\n");
-    printf("\t\t\t\t\t\t*                                               *\n");
-    printf("\t\t\t\t\t\t*************************************************\n\n");
-    Sleep(100);
+    printf("\t\t\t\t\t\t***************************************************\n");
+    printf("\t\t\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t\t\t* 0- remplissage du tableau automatiquemant(test) *\n");
+    printf("\t\t\t\t\t\t* 1- Ajouter un compte bancaire                   *\n");
+    printf("\t\t\t\t\t\t* 2- Ajouter plusieurs comptes bancaires          *\n");
+    printf("\t\t\t\t\t\t* 3- Operations                                   *\n");
+    printf("\t\t\t\t\t\t* 4- Affichage                                    *\n");
+    printf("\t\t\t\t\t\t* 5- Fidelisation                                 *\n");
+    printf("\t\t\t\t\t\t* 6- Quitter l'application                        *\n");
+    printf("\t\t\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t\t\t***************************************************\n\n");
+    Sleep(50);
+    system("cls");
     system("cls");
     printf("\n\n\n\n\n\n\n\n");
-    printf("\t\t\t\t\t*************************************************\n");
-    printf("\t\t\t\t\t*                                               *\n");
-    printf("\t\t\t\t\t*   1- Ajouter un compte bancaire               *\n");
-    printf("\t\t\t\t\t*   2- Ajouter plusieurs comptes bancaires      *\n");
-    printf("\t\t\t\t\t*   3- Operations                               *\n");
-    printf("\t\t\t\t\t*   4- Affichage                                *\n");
-    printf("\t\t\t\t\t*   5- Fidelisation                             *\n");
-    printf("\t\t\t\t\t*   6- Quitter l'application                    *\n");
-    printf("\t\t\t\t\t*                                               *\n");
-    printf("\t\t\t\t\t*************************************************\n\n");
-    Sleep(100);
+    printf("\t\t\t\t\t***************************************************\n");
+    printf("\t\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t\t* 0- remplissage du tableau automatiquemant(test) *\n");
+    printf("\t\t\t\t\t* 1- Ajouter un compte bancaire                   *\n");
+    printf("\t\t\t\t\t* 2- Ajouter plusieurs comptes bancaires          *\n");
+    printf("\t\t\t\t\t* 3- Operations                                   *\n");
+    printf("\t\t\t\t\t* 4- Affichage                                    *\n");
+    printf("\t\t\t\t\t* 5- Fidelisation                                 *\n");
+    printf("\t\t\t\t\t* 6- Quitter l'application                        *\n");
+    printf("\t\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t\t***************************************************\n\n");
+    Sleep(50);
+    system("cls");
+    printf("\n\n\n\n\n\n\n\n");
+    printf("\t\t\t\t***************************************************\n");
+    printf("\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t* 0- remplissage du tableau automatiquemant(test) *\n");
+    printf("\t\t\t\t* 1- Ajouter un compte bancaire                   *\n");
+    printf("\t\t\t\t* 2- Ajouter plusieurs comptes bancaires          *\n");
+    printf("\t\t\t\t* 3- Operations                                   *\n");
+    printf("\t\t\t\t* 4- Affichage                                    *\n");
+    printf("\t\t\t\t* 5- Fidelisation                                 *\n");
+    printf("\t\t\t\t* 6- Quitter l'application                        *\n");
+    printf("\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t***************************************************\n\n");
+    Sleep(50);
     system("cls");
     Sleep(50);
     printf("\n\n\n");
     printf("\t\t\t\t\tGestion Bancaire\n\n\n");
     printf("\t\t\t\t\tMENU Principale\n\n");
-    printf("\t\t\t*************************************************\n");
-    printf("\t\t\t*                                               *\n");
-    printf("\t\t\t*   1- Ajouter un compte bancaire               *\n");
-    printf("\t\t\t*   2- Ajouter plusieurs comptes bancaires      *\n");
-    printf("\t\t\t*   3- Operations                               *\n");
-    printf("\t\t\t*   4- Affichage                                *\n");
-    printf("\t\t\t*   5- Fidelisation                             *\n");
-    printf("\t\t\t*   6- Quitter l'application                    *\n");
-    printf("\t\t\t*                                               *\n");
-    printf("\t\t\t*************************************************\n\n");
-    Sleep(100);
+    printf("\t\t\t\t***************************************************\n");
+    printf("\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t* 0- remplissage du tableau automatiquemant(test) *\n");
+    printf("\t\t\t\t* 1- Ajouter un compte bancaire                   *\n");
+    printf("\t\t\t\t* 2- Ajouter plusieurs comptes bancaires          *\n");
+    printf("\t\t\t\t* 3- Operations                                   *\n");
+    printf("\t\t\t\t* 4- Affichage                                    *\n");
+    printf("\t\t\t\t* 5- Fidelisation                                 *\n");
+    printf("\t\t\t\t* 6- Quitter l'application                        *\n");
+    printf("\t\t\t\t*                                                 *\n");
+    printf("\t\t\t\t***************************************************\n\n");
+    Sleep(50);
 }
