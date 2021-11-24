@@ -63,7 +63,7 @@ menu :
             index++;
         }
 
-        printf("Bien Ajouté");
+        printf("\n\n\t\t\t\t\t\t\tBien Ajoute\n\n");
 
 
         printf("go back to the menu press 1 and enter\n");
@@ -209,9 +209,9 @@ retrait :
                 printf("\n\t\t\t\tL'operation a ete effectuee avec Succes\n\n\n");
             }
 
-            printf("go back to the menu press 1 and enter\n");
-            printf("go back to the Operation press 2 and enter\n");
-            printf("go back to the retrait press 3 and enter\n");
+            printf("\tgo back to the menu press 1 and enter\n");
+            printf("\tgo back to the Operation press 2 and enter\n");
+            printf("\tgo back to the retrait press 3 and enter\n");
             do
             {
                 printf("\t\t\t\t");
@@ -265,8 +265,8 @@ depot :
                 printf("\n\t\t\t\tL'operation a ete effectuee avec Succes\n\n\n");
             }
 
-            printf("go back to the menu press 1 and enter\n");
-            printf("go back to the retrait press 2 and enter\n");
+            printf("\tgo back to the menu press 1 and enter\n");
+            printf("\tgo back to the retrait press 2 and enter\n");
             do
             {
                 printf("\t\t\t\t");
@@ -343,8 +343,8 @@ transfert :
                 printf("\t\tDestinataire : CIN:%s | NOM:%s | PRENOM:%s | MONTANT:%f \n\n\n\n",cin[check2],nom[check2],prenom[check2],montant[check2]);
             }
 
-            printf("go back to the menu press 1 and enter\n");
-            printf("go back to the transfert press 2 and enter\n");
+            printf("\tgo back to the menu press 1 and enter\n");
+            printf("\tgo back to the transfert press 2 and enter\n");
             do
             {
                 printf("\t\t\t\t");
@@ -372,9 +372,9 @@ transfert :
 
 
         }
-        printf("go back to the menu press 1 and enter\n");
-        printf("go back to the Affichage menu press 2 and enter\n");
-        printf("go back to the Retrait menu press 3 and enter\n");
+        printf("\tgo back to the menu press 1 and enter\n");
+        printf("\tgo back to the Affichage menu press 2 and enter\n");
+        printf("\tgo back to the Retrait menu press 3 and enter\n");
 
         do
         {
@@ -401,8 +401,8 @@ affichage :
         printf("\t\t\t\t\tMENU Affichage\n\n");
         printf("\t\t 1- Affichage Par Ordre Ascendant\n");
         printf("\t\t 2- Affichage Par Ordre Descendant \n");
-        printf("\t\t 3- Affichage Par Ordre Ascendant \n");
-        printf("\t\t 4- Affichage Par Ordre Ascendant \n");
+        printf("\t\t 3- Affichage Par Ordre Ascendant \n\t\t  (les comptes bancaire ayant un montant superieur a un chiffre introduit)\n");
+        printf("\t\t 4- Affichage Par Ordre Descendant \n\t\t  (les comptes bancaire ayant un montant superieur a un chiffre introduit)\n");
         printf("\t\t 5- Recherche Par CIN \n");
         printf("\t\t 6- go to menu principale \n\n\n");
 
@@ -411,7 +411,7 @@ affichage :
 
         do
         {
-            printf("Choisissez l'option souhaitee dans cette liste\t");
+            printf("\tChoisissez l'option souhaitee dans cette liste\t");
             scanf("%d",&c);
         }
         while(c <= 0 || c>6);
@@ -459,7 +459,7 @@ affichage :
 
             do
             {
-                printf("\t\t\tAfficher les comptes dont le montant est supérieur a : ");
+                printf("\t\t\tAfficher les comptes dont le montant est superieur a : ");
                 scanf("%d",&floor);
             }
             while(floor < 0);
@@ -485,7 +485,7 @@ affichage :
 
             do
             {
-                printf("\t\t\tAfficher les comptes dont le montant est supérieur a : ");
+                printf("\t\t\tAfficher les comptes dont le montant est superieur a : ");
                 scanf("%d",&floor);
             }
             while(floor < 0);
@@ -527,8 +527,8 @@ recherch :
 
 
 
-            printf("go back to the menu press 1 and enter\n");
-            printf("go back to the recherche press 2 and enter\n");
+            printf("\tgo back to the menu press 1 and enter\n");
+            printf("\tgo back to the research press 2 and enter\n");
             do
             {
                 printf("\t\t\t\t");
@@ -551,8 +551,8 @@ recherch :
             break;
         }
 
-        printf("go back to the menu press 1 and enter\n");
-        printf("go back to the Affichage menu press 2 and enter\n");
+        printf("\tgo back to the menu press 1 and enter\n");
+        printf("\tgo back to the Affichage menu press 2 and enter\n");
         do
         {
             printf("\t\t\t\t");
@@ -606,8 +606,8 @@ fidelisation :
             char sure[10];
             do
             {
-                printf("Are you sure ?\n");
-                printf("write 'YES' if you are sure and 'NO' if you are not sure : \t");
+                printf("\tAre you sure ?\n");
+                printf("\twrite 'YES' if you are sure and 'NO' if you are not sure : \t");
                 scanf("%s",sure);
                 printf("\n\n\nmax1 : %f |max2 : %f |max2 : %f \n\n\n",m1,m2,m3);
                 for(i=0; i<index; i++)
@@ -617,7 +617,7 @@ fidelisation :
                         printf("\t\t CIN : %s | NOM : %s | PRENOM : %s | MONTANT : %f \n",cin[i],nom[i],prenom[i],montant[i]);
                     }
                 }
-
+				printf("\n\n");
             }
             while(strcmp(sure,"YES") != 0 && strcmp(sure,"NO") != 0 );
 
@@ -645,16 +645,16 @@ fidelisation :
                     printf("\t\t CIN : %s | NOM : %s | PRENOM : %s | MONTANT : %f \n",cin[i],nom[i],prenom[i],montant[i]);
                 }
             }
-
+			printf("\n\n");
 
         }
         else
         {
-            printf("\t\t\t\t\tIl n'y a pas de compte\a\n\n\n\n");
+            printf("\t\t\t\t\tIl n'y a pas de compte\a\n\n\n");
         }
 
 
-        printf("go back to the menu press 1 and enter\t");
+        printf("\tgo back to the menu press 1 and enter\t");
         do
         {
             scanf("%d",&m);
@@ -694,7 +694,6 @@ int ajoutCompte(int indx,char cn[30][10],char n[30][50],char p[30][50],double m[
     indx++;
     printf("\t\t l'index : %d",indx);
     printf("\t\tLe compte bancaire est bien ajoute\n\n");
-
 
     return indx;
 }
@@ -755,6 +754,7 @@ void aff(int indx,char cn[500][10],char n[500][50],char p[500][50],double m[500]
         }
 
     }
+    printf("\n\n");
 }
 
 void strswitch(char string1[50],char string2[50])
