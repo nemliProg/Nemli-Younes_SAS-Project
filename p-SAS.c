@@ -117,6 +117,7 @@ ajout :
     case 2:
 
 ajoutp :
+	
         system("cls");
         printf("\n\n");
         printf("\t\t\t\t\tGestion Bancaire\n\n\n");
@@ -217,7 +218,7 @@ retrait :
                 printf("\t\t\t\t");
                 scanf("%d",&m);
             }
-            while(m != 1 && m != 2 && m != 3);
+            while(m < 1 || m > 3);
 
             if(m == 1)
             {
@@ -266,24 +267,27 @@ depot :
             }
 
             printf("\tgo back to the menu press 1 and enter\n");
-            printf("\tgo back to the retrait press 2 and enter\n");
+            printf("\tgo back to the Operation press 2 and enter\n");
+            printf("\tgo back to the depot press 3 and enter\n");
             do
             {
                 printf("\t\t\t\t");
                 scanf("%d",&m);
             }
-            while(m != 1 && m != 2);
+            while(m < 1 || m > 3);
 
             if(m == 1)
             {
                 goto menu;
             }
+            else if(m == 2)
+            {
+                goto operation;
+            }
             else
             {
                 goto depot;
             }
-
-            break;
 
         case 3:
 transfert :
@@ -344,17 +348,22 @@ transfert :
             }
 
             printf("\tgo back to the menu press 1 and enter\n");
-            printf("\tgo back to the transfert press 2 and enter\n");
+            printf("\tgo back to the Operation press 2 and enter\n");
+            printf("\tgo back to the Transfert press 3 and enter\n");
             do
             {
                 printf("\t\t\t\t");
                 scanf("%d",&m);
             }
-            while(m != 1 && m != 2);
+            while(m < 1 || m > 3);
 
             if(m == 1)
             {
                 goto menu;
+            }
+            else if(m == 2)
+            {
+                goto operation;
             }
             else
             {
@@ -579,9 +588,8 @@ fidelisation :
         printf("\t\t\tFidelisation\n\n\n");
         if(index != 0)
         {
-            m1 = -1;
-            m2 = -1;
-            m3 = -1;
+            m1 = -1;m2 = -1;m3 = -1;
+        
 
             for(i=0; i<index; i++)
             {
